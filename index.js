@@ -1,18 +1,16 @@
-const express = require('express')
-const {config} = require('dotenv').config()
-const users = require('./routes/User')
-const comments = require('./routes/Comment')
-const photos = require('./routes/Photo')
-const socialMedia = require('./routes/SocialMedia')
+const express = require("express");
+const app = express();
+const user = require("./routes/User");
+const PORT = 3000;
 
-const app = express()
+app.use(
+  express.urlencoded({
+    extended: false,
+  })
+);
+app.use(express.json());
+app.use(user);
 
-app.use(express.json())
-
-// app.use('/api/v1', users)
-// app.use('/api/v1', refelections)
-
-
-app.listen(process.env.PORT, () => {
-  console.log(`Base URL : localhost:${process.env.PORT}`)
-})
+app.listen(PORT, () => {
+  console.log(`Berjalan pada port ${PORT}`);
+});
