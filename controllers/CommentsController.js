@@ -20,9 +20,9 @@ class CommentsController {
         try {
             const {commentId} = req.params
             const {comment} = req.body
-            const validateOwnerComment = await Models.Comment.findOne({where : {userId : id, id : commentId}})
+            const validateOwnerComment = await Models.Comment.findOne({where : {UserId : id, id : commentId}})
             if(!validateOwnerComment) return res.status(400).json("anda tidak memiliki akses")
-            await Models.Comment.update({comment},{Where : {id : commentId}})
+            await Models.Comment.update({comment}, {Where : {id : commentId}})
             const Comment = await Models.Comment.findOne({where : {id : commentId}})
             return res.status(200).json({
                 comment : Comment
