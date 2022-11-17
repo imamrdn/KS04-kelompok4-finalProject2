@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "12345678",
-    "database": "database_development_2",
-    "host": "127.0.0.1",
+    "username": "thouka",
+    "password": "180618",
+    "database": "databaseMyGram_development",
+    "host": "localhost",
     "dialect": "postgres"
   },
   "test": {
