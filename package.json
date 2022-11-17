@@ -4,14 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "start": "node index.js",
     "dev" : "nodemon index.js"
-=======
-    "start": "index.js",
-    "dev" : "nodemon index.js",
-    "prepareDB" : "npx sequelize db:create && npx sequelize db:migrate"
->>>>>>> e4aba320175389b40a59494e7b7b0bbfa2090073
   },
   "author": "",
   "license": "ISC",
